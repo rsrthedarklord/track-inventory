@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import AppNavigationContainer from './router/Router';
 import {SafeAreaView, Platform } from 'react-native';
+import {Provider} from 'react-redux';
+
+import store from './store/Store';
 
 class App extends Component{
   constructor () {
@@ -15,7 +18,9 @@ class App extends Component{
           paddingTop: Platform.OS === "android" ? 25 : 0,
         }}
       >
-        <AppNavigationContainer />
+        <Provider store={store}>
+          <AppNavigationContainer />
+        </Provider>
       </SafeAreaView>
     );
   }
