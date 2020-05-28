@@ -4,6 +4,7 @@ import {
   View,
   Image,
   TextInput,
+  Button,
   Platform,
 } from "react-native";
 
@@ -12,6 +13,8 @@ import React, { Component } from 'react';
 class UserIntro extends Component{
     constructor(props){
       super(props);
+      props.navigation.setOptions({title: 'Welcome'});
+
       this.state = {
         userName : ''
       }

@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import UserIntroReduxed from '../actions/UserIntroActions';
-import Inventories from '../components/screens/Inventories';
-import AddInventory from '../components/screens/AddInventory';
-import Inventory from '../components/screens/Inventory';
-import AddInventoryItem from '../components/screens/AddInventoryItem';
+import UserIntroReduxed from '../components/screens/UserIntroReduxed';
+import InventoriesReduxed from '../components/screens/InventoriesReduxed';
+import AddInventoryReduxed from '../components/screens/AddInventoryReduxed';
+import InventoryReduxed from '../components/screens/InventoryReduxed';
+import AddInventoryItemReduxed from '../components/screens/AddInventoryItemReduxed';
 
 const Stack = createStackNavigator();
 
@@ -15,13 +15,13 @@ class AppNavigationContainer extends Component{
         return (
             <NavigationContainer>
             <Stack.Navigator
-              initialRouteName = {'UserIntro'}
+              initialRouteName = {'Inventories'}
             >
               <Stack.Screen name="UserIntro" component={UserIntroReduxed} />
-              <Stack.Screen name="Inventories" component={Inventories} />
-              <Stack.Screen name="AddInventory" component={AddInventory} />
-              <Stack.Screen name="Inventory" component={Inventory} />
-              <Stack.Screen name="AddInventoryItem" component={AddInventoryItem} />
+              <Stack.Screen name="Inventories" component={InventoriesReduxed} />
+              <Stack.Screen name="AddInventory" component={AddInventoryReduxed} />
+              <Stack.Screen name="Inventory" component={InventoryReduxed} />
+              <Stack.Screen name="AddInventoryItem" component={AddInventoryItemReduxed} />
             </Stack.Navigator>
           </NavigationContainer>
         )

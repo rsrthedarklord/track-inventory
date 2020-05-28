@@ -1,11 +1,11 @@
 import {connect} from 'react-redux';
 
-import * as Actions from './ActionTypes';
-import UserIntro from '../components/screens/UserIntro';
+import * as Actions from '../../actions/ActionTypes';
+import UserIntro from './UserIntro';
 
 const mapStateToProps = (state) => {
     return ({
-        userName : state.userIntroReducer.userName
+        userName : state.commonReducer.userName
     });
 };
 
